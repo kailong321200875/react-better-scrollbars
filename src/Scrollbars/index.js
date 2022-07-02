@@ -570,6 +570,7 @@ export default class Scrollbars extends Component {
       thumbSize,
       thumbMinSize,
       universal,
+      noresize,
       autoHeight,
       autoHeightMin,
       autoHeightMax,
