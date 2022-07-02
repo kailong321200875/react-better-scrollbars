@@ -84,7 +84,9 @@ export default class Scrollbars extends Component {
     // eslint-disable-line react/sort-comp
     const { universal } = this.props;
     if (!universal) return;
-    this.setState({ didMountUniversal: true });
+    this.setState({
+      didMountUniversal: true,
+    });
   }
 
   componentDidUpdate() {
@@ -450,8 +452,12 @@ export default class Scrollbars extends Component {
 
   showTracks() {
     clearTimeout(this.hideTracksTimeout);
-    css(this.trackHorizontal, { opacity: 1 });
-    css(this.trackVertical, { opacity: 1 });
+    css(this.trackHorizontal, {
+      opacity: 1,
+    });
+    css(this.trackVertical, {
+      opacity: 1,
+    });
   }
 
   hideTracks() {
@@ -461,8 +467,12 @@ export default class Scrollbars extends Component {
     const { autoHideTimeout } = this.props;
     clearTimeout(this.hideTracksTimeout);
     this.hideTracksTimeout = setTimeout(() => {
-      css(this.trackHorizontal, { opacity: 0 });
-      css(this.trackVertical, { opacity: 0 });
+      css(this.trackHorizontal, {
+        opacity: 0,
+      });
+      css(this.trackVertical, {
+        opacity: 0,
+      });
     }, autoHideTimeout);
   }
 
@@ -639,7 +649,9 @@ export default class Scrollbars extends Component {
       },
       [
         cloneElement(
-          renderView({ style: viewStyle }),
+          renderView({
+            style: viewStyle,
+          }),
           {
             key: "view",
             ref: (ref) => {
@@ -649,7 +661,9 @@ export default class Scrollbars extends Component {
           children
         ),
         cloneElement(
-          renderTrackHorizontal({ style: trackHorizontalStyle }),
+          renderTrackHorizontal({
+            style: trackHorizontalStyle,
+          }),
           {
             key: "trackHorizontal",
             ref: (ref) => {
@@ -657,7 +671,9 @@ export default class Scrollbars extends Component {
             },
           },
           cloneElement(
-            renderThumbHorizontal({ style: thumbHorizontalStyleDefault }),
+            renderThumbHorizontal({
+              style: thumbHorizontalStyleDefault,
+            }),
             {
               ref: (ref) => {
                 this.thumbHorizontal = ref;
@@ -666,7 +682,9 @@ export default class Scrollbars extends Component {
           )
         ),
         cloneElement(
-          renderTrackVertical({ style: trackVerticalStyle }),
+          renderTrackVertical({
+            style: trackVerticalStyle,
+          }),
           {
             key: "trackVertical",
             ref: (ref) => {
@@ -674,7 +692,9 @@ export default class Scrollbars extends Component {
             },
           },
           cloneElement(
-            renderThumbVertical({ style: thumbVerticalStyleDefault }),
+            renderThumbVertical({
+              style: thumbVerticalStyleDefault,
+            }),
             {
               ref: (ref) => {
                 this.thumbVertical = ref;
