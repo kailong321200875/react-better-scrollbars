@@ -729,6 +729,7 @@ Scrollbars.propTypes = {
   autoHeightMin: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   autoHeightMax: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   universal: PropTypes.bool,
+  noresize: PropTypes.bool,
   style: PropTypes.object,
   children: PropTypes.node,
 };
